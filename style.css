@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:Helvetica;
+}
+.wrapper{
+    width:100%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+.pattern{
+    position: absolute;
+    left:20%;
+    width: 300px;
+    height: 100vh;
+    background: url(line.jpg) no-repeat 50% 50%;
+    z-index: -1;
+    opacity: .4;
+}
+.nav{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+
+}
+.logo{
+    font-size: 18px;
+    margin: 0.2em  2em;
+    line-height: 80px;
+    position: absolute;
+}
+.menu{
+    position: absolute;
+    height: 80px;
+    right:120px;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    margin:.2em 0;
+    padding: 0 15px;
+    font-size: 15px;
+    display: inline-block;
+    line-height: 80px;
+    font-weight: 500;
+}
+.cart{
+    position:fixed;
+    font-size: 16px;
+    margin:0.2em 1em;
+    line-height: 80px;
+    right:20px;
+}
+.box{
+    position: absolute;
+    z-index: -1;
+}
+.box-1{
+    width:60px;
+    height: 60px;
+    background: none;
+    border:2px solid orange;
+    top:10%;
+    transform: rotate(60deg);
+    left:15%;
+}
+.box-2{
+    width:120px;
+    height: 120px;
+    background: orange;
+    top:54%;
+    transform: rotate(-110deg);
+    left: 28%;
+}
+.box-3{
+    width:80px;
+    height: 80px;
+    background: none;
+    border:2px solid orange;
+    top:34%;
+    transform: rotate(30deg);
+    left: 78%;
+}
+
+
+.runner{
+    margin-left:25% !important;
+    display:block;
+    height: 700px;
+    filter: grayscale(100%);
+}
+.runner img{
+    height: 100%;
+    z-index: 2;
+    margin-top:10px;
+}
+.title-2{
+    position: absolute;
+    z-index: -1;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-style: italic;
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke:2px orange;
+    text-transform: uppercase;
+    font-size: 90px;
+    font-family: Anton;
+    opacity: 0;
+}
+.title-1{
+    position: absolute;
+    top:38%;
+    left:30%;
+    transform: translate(-50%,-50%);
+    font-family: 'Anton';
+    font-size: 90px;
+    color:orange;
+    padding-right: 20px;
+    font-style: italic;
+    text-transform: uppercase;
+    z-index: 1;
+    opacity: 0;
+}
+.content{
+    position: absolute;
+    top: 64%;
+    left:57%;
+    width:36%;
+    color: grey;
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 24px;
+}
+button{
+    margin-top:6px;
+    background: orange;
+    color:white;
+    padding:20px 30px;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 3px;
+    border:none;
+}
+.media{
+    position: absolute;
+    bottom:210px;
+}
+.media ul{
+    position: absolute;
+    list-style: none;
+}
+.media ul li{
+    color:grey;
+    padding:10px 0 10px 40px;
+}
+@media (max-width:900px){
+    .wrapper{
+        background:no-repeat 50% 50% ;
+        background-size: cover;
+    }
+    .pattern{
+        display: none;
+    }
+    .runner {
+        position: absolute;
+        left:-100px;
+        z-index: -1;
+    }
+    .title-1,.title-2{
+        font-size: 50px;
+    }
+    .title-1{
+        top: 40%;
+        left:20%;
+    }
+    .title-2{
+        left:70%;
+        z-index: 1;
+    }
+    .menu{
+        display: none;
+    }
+    .content p{
+        display: none;
+    }
+    .box-2{
+        top:70%;
+    }
+    .content button{
+        position: fixed;
+        right:3em;
+        bottom:4em;
+        z-index: 1;
+    }
+}
